@@ -11,6 +11,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/", // URL, с которого перенаправляем
+        destination: "/catalog", // URL, куда перенаправляем
+        permanent: true, // true для 301, false для 302
+      },
+    ];
+  },
 };
 
 export default nextConfig;

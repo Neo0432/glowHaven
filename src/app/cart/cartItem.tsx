@@ -36,6 +36,7 @@ export default function CartItem(props: {
   return (
     <article className="flex justify-between ">
       <div className="flex gap-9 ">
+        (product ?
         <div className="flex justify-center items-center w-fit h-fit p-6 rounded-2xl bg-item-bg">
           <Image
             src={product.thumbnail}
@@ -46,6 +47,9 @@ export default function CartItem(props: {
             alt=""
           ></Image>
         </div>
+        :{" "}
+        <div className="flex justify-center items-center h-fit p-6 rounded-2xl w-36 h36 bg-gray-500"></div>{" "}
+        )
         <div className="flex flex-col gap-6 max-w-[42rem]">
           <div className="flex items-center gap-3">
             <h2 className="text-xl font-semibold">{product.title}</h2>
