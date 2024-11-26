@@ -14,7 +14,7 @@ export default function NavButton(props: { imageName: string; path: string }) {
   return (
     <Link
       href={props.path}
-      className="relative flex justify-center items-center rounded-2xl p-3 w-fit h-fit bg-primary"
+      className="relative flex justify-center items-center rounded-2xl p-3 w-fit h-fit bg-primary transition-all hover:bg-primary-hover"
     >
       <Image
         src={imgPath}

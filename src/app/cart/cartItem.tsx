@@ -83,7 +83,7 @@ export default function CartItem(props: {
         <div className="flex justify-end gap-6">
           <button
             onClick={deleteItem}
-            className="flex p-4 rounded-2xl bg-[#EF4B4B]"
+            className="flex p-4 rounded-2xl bg-[#EF4B4B] transition-all hover:bg-[#FF3838]"
           >
             <Image
               src="/cart/deleteItem.svg"

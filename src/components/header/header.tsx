@@ -11,7 +11,7 @@ export default function Header() {
           </Link>
           <Link
             href="/catalog"
-            className="flex justify-center items-center rounded-2xl p-3 px-6 bg-primary text-xl font-semibold text-white"
+            className="flex justify-center items-center rounded-2xl p-3 px-6 bg-primary transition-all text-xl font-semibold text-white hover:bg-primary-hover hover:scale-105"
           >
             Catalog
           </Link>

@@ -53,7 +53,7 @@ export default function ProductCard(props: { product: IProduct }) {
       </div>
 
       <div className="flex w-full gap-2 h-14">
-        <button className="flex justify-center items-center px-4 min-w-[56px] h-[56px] rounded-2xl bg-focus-element transition-colors hover:bg-[#FA8756]">
+        <button className="flex justify-center items-center px-4 min-w-[56px] h-[56px] rounded-2xl bg-focus-element transition-colors hover:bg-[#FA8756] active:bg-[#fb7c46]">
           <Image
             src="/favoriteIcon.svg"
             width="0"
@@ -65,7 +65,7 @@ export default function ProductCard(props: { product: IProduct }) {
         </button>
         <button
           onClick={() => addToCart(product.id, product.stock)}
-          className="w-full h-full rounded-2xl font-semibold text-2xl text-white bg-focus-element transition-colors hover:bg-[#FA8756]"
+          className="w-full h-full rounded-2xl font-semibold text-2xl text-white bg-focus-element transition-colors hover:bg-[#FA8756] active:bg-[#fb7c46]"
         >
           Add to cart
         </button>

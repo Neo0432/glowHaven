@@ -116,7 +116,7 @@ export default function Payment(props: {
               />
               <button
                 type="submit"
-                className="flex justify-center items-center px-6 py-2 w-full h-[3.75rem] rounded-2xl bg-green-coin font-medium text-2xl text-white"
+                className="flex justify-center items-center px-6 py-2 w-full h-[3.75rem] rounded-2xl bg-green-coin font-medium text-2xl text-white transition-all hover:bg-green-coin-hover active:bg-green-coin-active"
               >
                 Top up Coins
               </button>
@@ -162,7 +162,7 @@ export default function Payment(props: {
             </form>
             <button
               onClick={() => Pay(payMethod, cost)}
-              className="flex justify-center items-center px-6 py-2 w-full h-[3.75rem] rounded-2xl bg-green-coin font-medium text-2xl text-white"
+              className="flex justify-center items-center px-6 py-2 w-full h-[3.75rem] rounded-2xl bg-green-coin font-medium text-2xl text-white transition-all hover:bg-green-coin-hover active:bg-green-coin-active"
             >
               Pay
             </button>
