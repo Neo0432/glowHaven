@@ -1,26 +1,18 @@
 "use client";
 
 import GetProducts from "../../functions/getProducts";
-import { ICatalog, IProduct } from "./Product";
+import { IProduct } from "./Product";
 import Catalog from "./catalog";
-import { useState, useEffect } from "react";
+import { useQuery } from "react-query";
 
 export default function Page() {
-  const [catalog, setCatalog] = useState<ICatalog | null>(null);
+  const { data, isLoading, isError } = useQuery("products", GetProducts);
 
-  useEffect(() => {
-    async function fetchCatalog() {
-      const fetchedData = await GetProducts();
-      setCatalog(fetchedData);
-    }
-    fetchCatalog();
-  }, []);
+  if (isLoading) return <div>Loading...</div>;
+  if (isError) return <div>Error fetching products</div>;
+  if (!data?.products) return <div>No products available</div>;
 
-  if (!catalog) return <div>Loaging...</div>;
-
-  const products: IProduct[] | null = catalog ? catalog.products : null;
-
-  if (!products) return <div>Loaging...</div>;
+  const products: IProduct[] = data.products;
 
   return (
     <>
